@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workcafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<main>
+    <div>
+        <div class="header-img">
+            <img src="assets/logo.png" width="220" alt="logo">
+        </div>
+        <h2>Projekt: Workcafe</h2>
+        <p>
+            Das Projekt heisst Workcafe und listet Cafés auf mit Namen, Bild und Rating. Die Bilder werden nicht direkt
+            auf meiner Seite gehostet, sondern via Bild-URL eingefügt. Für diese Version
+            biete ich drei unterschiedliche Städte an: Bern, Zürich und Basel. Als normaler User kann man ein neues Café
+            erfassen und man kann Ratings hinzufügen. Als Admin kann man anstatt neue Ratings hinzuzufügen Cafés
+            löschen. Für die Ratings gibt es die Kriterien: Coffee (wie gut der Kaffee ist), PowerPlug (ob es genügend
+            Lademöglichkeiten gibt) und Internet (ob das Internet schnell ist).
+        </p>
+
+        <h2>Funktionen</h2>
+        <p>Um die Webseite zu verwenden können zwei verschiedene Nutzer verwendet werden. Folgend sehen sie die Nutzer
+            aufgelistet:</p>
+        <ul>
+            <li><b>username</b>: user <b>password</b>: user</li>
+            <li><b>username</b>: admin <b>password</b>: admin</li>
+        </ul>
+        <!--function 1-->
+        <h4>Cafés in unterschiedliechen Städten anschauen</h4>
+        <ol>
+            <li>Login als <u>user</u> oder <u>admin</u></li>
+            <li>Auf der Startseite sieht man, dass keine Stadt ausgewählt ist, man kann also eine Stadt auswählen.</li>
+            <li>Es werden nun unterschiedlieche Café's angezeigt mit Bewertung, zudem sieht man wie viele Ratings
+                erfasst wurden.
+            </li>
+        </ol>
+        <div class="header-img">
+            <img class="gif-info" src="assets/citySelect.gif" alt="select city"/>
+        </div>
+        <!--function 2-->
+        <h4>Neues Café erfassen</h4>
+        <ol>
+            <li>Login als <u>user</u> oder <u>admin</u></li>
+            <li>Auf der Startseite gibt es oben rechts einen Button um ein Cafe zu erfassen. Dieser kann geklickt
+                werden.
+            </li>
+            <li>Es wird eine Form geöffnet, in welcher man die Details erfassen kann. Der Name und die Picture-Url
+                müssen
+                ausgefüllt werden. Für den Link gibt es zudem eine Frontend sowie Server-seitige Validierung, ob es sich
+                um
+                einen Link handelt.
+            </li>
+            <li>Wenn man alles ausgefüllt hat und man die Form abschickt, wird man zu der City redirected, in welcher
+                man den Eintrag erstellt hat. Dort sieht man nun den neuen Eintrag.
+            </li>
+        </ol>
+        <div class="header-img">
+            <img class="gif-info" src="assets/createCafe.gif" alt="create Cafe"/>
+        </div>
+        <!--function 3-->
+        <h4>Neues Rating erfassen</h4>
+        <ol>
+            <li>Login als <u>user</u></li>
+            <li>
+                Für jede Place-karte gibt es im rechten oberen Eck einen Action Button, dieser kann geklickt werden und
+                man
+                kommt direkt zum Rating für den gewählten Place.
+            </li>
+            <li>
+                Bei Inputs kann nun der Wert ausgewählt werden, wie gut das Kaffee bezüglich dem jeweiligen Kriterium
+                ist. Die
+                Werte aktualisieren sich, wenn man den Schieberegler bewegt. Dies wurde zusätzlich mit Javascript
+                umgesetzt.
+            </li>
+            <li>
+                Wenn man dieses Rating nun abschickt, wird man zurück auf die Index-Seite geleitet und man kann bei der
+                bearbeiteten Card sehen, dass ein neues Rating erfasst wurde.
+            </li>
+        </ol>
+        <div class="header-img">
+            <img class="gif-info" src="assets/newRating.gif" alt="new Rating"/>
+        </div>
+        <!--function 4-->
+        <h4>Place löschen</h4>
+        <ol>
+            <li>Login als <u>admin</u></li>
+            <li>
+                Für jede Card gibt es im rechten oberen Eck einen Action Button, dieser kann geklickt werden und man
+                löscht somit den Place. Dieses Delete wurde mit Javascript umgesetzt, da für mich ein delete-call via
+                Form keinen Sinn machte. Für den Call habe ich zuerst fetch verwendet, musste dann aber auf axios
+                wechseln, da der HtmlUnitDriver, welchen ich für den Test verwende, fetch noch nicht unterstützt.
+            </li>
+            <li>
+                Wenn der Button geklickt wurde sieht man, dass die Karte verschwindet.
+            </li>
+        </ol>
+        <div class="header-img">
+            <img class="gif-info" src="assets/delete.gif" alt="delete place"/>
+        </div>
+        <h2>Technische Herausforderungen</h2>
+        <ul>
+            <li>
+                <b>Design:</b> Das Design habe ich zuerst in Figma geplant und dann in Htlm und css umgesetzt.
+                Schlussendlich war das Design relativ zeitaufwendig, ich bin aber zufrieden mit dem Resultat und hoffe
+                deshalb auck auf die Artisic Value Punkte.
+            </li>
+            <li>
+                <b>Average Rating:</b> Ich musste eine Methode finden, damit ich anstatt nur 1 Rating anzuzeigen, ein Average
+                Rating für jedes Kriterium anzeigen kann. Da habe mich dafür entschieden im Service eine Methode zu
+                schreiben, welche diese Averages berechnet und dann im Controller auf der Place Entity das Value setzt.
+                In einer weiteren Version könnte man dies vielleicht direkt auf Entity level oder im Repository mit etwas
+                custom SQL berechnen.
+            </li>
+            <li>
+                <b>Javascript Rating update and delete:</b> Damit ich für den Rating Input eine Zahl anzeigen konnte,
+                brauchte ich etwas custom javascript. Zudem habe ich das DELETE vom einem Place mit der axios library
+                gelöst. Eine Herausforderung dort war zudem einen Integration test zu schreiben, welcher mit Javascript
+                funktioniert.
+            </li>
+            <li>
+                <b>Verschachtelte OneToMany Beziehungen: </b> City kann mehrere Places haben und Places können mehrere
+                Ratings haben. Da wir in der Schule nur Beispiele mit einem OneToMany hatten, fand ich es schwierig zu
+                verstehen, wie ich einer City einen Place hinzufügen kann. Schlussendlich habe ich aber eine Lösung
+                gefunden, welche gut funktioniert.
+            </li>
+        </ul>
+    </div>
+</main>
+</body>
+</html>

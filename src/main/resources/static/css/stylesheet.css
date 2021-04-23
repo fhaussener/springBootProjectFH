@@ -1,0 +1,353 @@
+/*
+* === General ===
+*/
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.title-written {
+    margin-left: 4px;
+    font-size: 30px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    background-color: #FFD6AE;
+    font-size: 16px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    color: black;
+    border: none;
+    height: fit-content;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #fbe4cf;
+}
+
+.button img {
+    margin-right: 6px;
+}
+
+input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+}
+
+/*
+* === Top right actions ===
+*/
+
+.right-actions {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.right-actions .button {
+    margin-right: 4px;
+}
+
+.logout-link:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+/*
+* === City Selector ===
+*/
+
+.selector-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 140px;
+}
+
+.selector {
+    display: flex;
+    justify-content: center;
+}
+
+.selector ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.selector li {
+    float: left;
+}
+
+.selector li a {
+    display: block;
+    padding: 6px;
+    margin: 4px;
+}
+
+.selector li a:hover {
+    opacity: 0.7;
+}
+
+.selector li .selected-link {
+    background-color: #e2e2e2;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/*
+* === Card list ===
+*/
+
+.list-section ul {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.no-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+/*
+* === Single card styling ===
+*/
+
+.place-container {
+    position: relative;
+    margin: 24px 18px;
+    height: 340px;
+    width: 350px;
+    border-radius: 12px;
+    border: 1px solid #C1C1C1;
+}
+
+.place-container ul {
+    display: block;
+}
+
+.place-container ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 22px;
+}
+
+.place-container h3 {
+    margin-left: 22px;
+}
+
+.place-image {
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    height: 160px;
+    width: inherit;
+    object-fit: cover;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-container span {
+    color: grey;
+    margin-right: 22px;
+}
+
+/* Action-badge - Single card styling  */
+.action-badge {
+    display: flex;
+    align-items: center;
+    line-height: 16px;
+    padding: 10px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: #FFD6AE;
+    border-radius: 12px;
+}
+
+.action-badge:hover {
+    background-color: #fbe4cf;
+}
+
+.action-badge a {
+    display: flex
+}
+
+.action-badge a span {
+    margin-left: 6px;
+}
+
+/* Rating - Single card styling  */
+.rating-container {
+    display: flex;
+    align-items: center;
+}
+
+.rating-number {
+    width: 40px;
+    text-align: right;
+}
+
+.rating-bar {
+    width: 140px;
+    margin: 0 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc
+}
+
+.progress {
+    height: 20px;
+    border-radius: 7px;
+    background-color: #FFD6AE;
+}
+
+/*
+* === Add Rating and Place form ===
+*/
+
+.add-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.add-form h3 {
+    text-align: center;
+}
+
+.add-form ul {
+    list-style-type: none;
+    min-width: 250px;
+    padding: 0;
+}
+
+.add-form ul li {
+    padding: 6px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Rating range inputs - Add Rating and Place form */
+.range-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.range-container input {
+    width: 80%;
+    margin-right: 8px;
+}
+
+
+/* Form-actions - Add Rating and Place form */
+.add-form .form-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.form-actions a {
+    margin-right: 4px;
+}
+
+.form-actions a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+/*
+* === Login and Logout page ===
+*/
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login {
+    min-width: 320px;
+}
+
+.info-header {
+    text-align: center;
+}
+
+.info-header .logo {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.login-form .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.login-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Login info alerts - Login and Logout page */
+.alert {
+    padding: 16px;
+    margin: 8px 0;
+    border-radius: 4px;
+}
+
+.error {
+    background-color: indianred;
+    color: white;
+}
+
+.logout {
+    background-color: lightgoldenrodyellow;
+}
+

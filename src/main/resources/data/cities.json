@@ -1,0 +1,149 @@
+[
+  {
+    "id": 1,
+    "key": "zuerich",
+    "name": "Zürich",
+    "places": [
+      {
+        "placeName": "Boreal Coffee Shop",
+        "pictureUrl": "https://s3-us-west-2.amazonaws.com/wf-fileserver-sync/files/2018/11/213569-HGSkM1frQcSbmG9VvOZg-DSC_5527.jpg",
+        "ratings": [
+          {
+            "coffee": 60,
+            "powerPlug": 70,
+            "internet": 70
+          },
+          {
+            "coffee": 77,
+            "powerPlug": 76,
+            "internet": 80
+          }
+        ]
+      },
+      {
+        "placeName": "Auer&Co",
+        "pictureUrl": "https://zurich.impacthub.ch/wp-content/uploads/2016/03/Colab_0642_Masterlocation-gross_Masterlocation-gross-1024x410.jpg",
+        "ratings": [
+          {
+            "coffee": 77,
+            "powerPlug": 20,
+            "internet": 60
+          }
+        ]
+      },
+      {
+        "placeName": "Bovelli",
+        "pictureUrl": "https://media-cdn.tripadvisor.com/media/photo-w/07/2a/9d/a3/bovelli-caffe-cocktailbar.jpg",
+        "ratings": [
+          {
+            "coffee": 30,
+            "powerPlug": 44,
+            "internet": 50
+          }
+        ]
+      },
+      {
+        "placeName": "Miro Coffee",
+        "pictureUrl": "https://images.squarespace-cdn.com/content/v1/56716777df40f3234ea587ab/1539685132213-HNYE5T5GISWKR9V7PV4M/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/miro+specialty+coffee+and+roastery+zurich",
+        "ratings": [
+          {
+            "coffee": 92,
+            "powerPlug": 32,
+            "internet": 66
+          }
+        ]
+      },
+      {
+        "placeName": "Kraftwerk Café",
+        "pictureUrl": "https://i.pinimg.com/originals/05/b3/06/05b306700399a17f8b053665e8659858.jpg",
+        "ratings": [
+          {
+            "coffee": 55,
+            "powerPlug": 80,
+            "internet": 68
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "key": "bern",
+    "name": "Bern",
+    "places": [
+      {
+        "placeName": "Effinger",
+        "pictureUrl": "https://baerner-meitschi.ch/wp-content/uploads/2017/05/20170603_effinger_0005-1075x605.jpg",
+        "ratings": [
+          {
+            "coffee": 80,
+            "powerPlug": 60,
+            "internet": 66
+          }
+        ]
+      },
+      {
+        "placeName": "Kaffeehaus Max",
+        "pictureUrl": "https://gourmetnews.ch/wp-content/uploads/2019/05/tchibo_kaffeehaus-max_bern.jpg",
+        "ratings": [
+          {
+            "coffee": 50,
+            "powerPlug": 50,
+            "internet": 70
+          }
+        ]
+      },
+      {
+        "placeName": "Lehrerzimmer",
+        "pictureUrl": "https://www.progr.ch/files/resize(640x640)/data/tenantgallery/2020/04/IMG_3718.jpg",
+        "ratings": [
+          {
+            "coffee": 20,
+            "powerPlug": 20,
+            "internet": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "key": "basel",
+    "name": "Basel",
+    "places": [
+      {
+        "placeName": "Smilla",
+        "pictureUrl": "https://www.basel-restaurants.ch/x_bild_gr/002079.jpg",
+        "ratings": [
+          {
+            "coffee": 50,
+            "powerPlug": 20,
+            "internet": 70
+          }
+        ]
+      },
+      {
+        "placeName": "Bäckerei Kult - Elsi",
+        "pictureUrl": "https://baeckereikult.ch/wp-content/uploads/Location-Elsi-in-1024x739.jpg",
+        "ratings": [
+          {
+            "coffee": 80,
+            "powerPlug": 70,
+            "internet": 60
+          }
+        ]
+      },
+      {
+        "placeName": "Finkmüller Coffee",
+        "pictureUrl": "https://api.heartbeat.gmbh/image/filter/thumb/1920xnull/6181874722604035442762943531633581799505920o_a14f863b.jpg",
+        "ratings": [
+          {
+            "coffee": 77,
+            "powerPlug": 60,
+            "internet": 70
+          }
+        ]
+      }
+    ]
+  }
+]
